@@ -1,0 +1,55 @@
+@import "./mixins.scss";
+@import "./variables.scss";
+
+.main_container {
+  @include flexProp(column, 0rem, center, center);
+  min-height: fit-content;
+  padding: 2rem;
+
+  .selection_form {
+    @include FormContainer;
+    width: 30rem;
+    gap: 2rem;
+
+    .title {
+      font-size: 1.8rem;
+      font-weight: 500;
+    }
+
+    .subtitle {
+      width: 100%;
+      text-align: left;
+      font-weight: 500;
+      font-size: 1.1rem;
+    }
+
+    .category_container {
+      @include flexProp(column, 1.5rem, flex-start, flex-start);
+
+      .category_label {
+        @include flexProp(row, 1rem, flex-start, center);
+        font-size: 0.9rem;
+        cursor: pointer;
+
+        span {
+          height: 1.5rem;
+          width: 1.5rem;
+          border-radius: 5px;
+          background-color: $checkbox-bg;
+          display: grid;
+          place-items: center;
+          overflow: hidden;
+
+          .check_icon {
+            height: 120%;
+            width: 120%;
+          }
+        }
+
+        input[type="checkbox"] {
+          display: none;
+        }
+      }
+    }
+  }
+}

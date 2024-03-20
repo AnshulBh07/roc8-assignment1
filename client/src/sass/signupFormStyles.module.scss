@@ -1,0 +1,37 @@
+@import "./mixins.scss";
+@import "./variables.scss";
+
+.form_container {
+  @include FormContainer;
+  width: 28rem;
+
+  .title {
+    font-size: 1.8rem;
+    font-weight: 550;
+  }
+
+  .form_wrapper {
+    @include flexProp(column, 1.5rem, flex-start, center);
+    margin-top: 1rem;
+
+    .input_field {
+      @include FormInput;
+    }
+
+    .signup_btn {
+      @include FormButton;
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+    }
+  }
+
+  .separator {
+    width: 100%;
+    height: 0.1rem;
+    background-color: $checkbox-bg;
+  }
+
+  .redirect {
+    @include FormRedirect;
+  }
+}

@@ -1,0 +1,54 @@
+@import "./mixins.scss";
+@import "./variables.scss";
+
+.form_container {
+  @include FormContainer;
+  width: 30rem;
+
+  .heading {
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+
+  .text {
+    margin-top: 0.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+    line-height: 25px;
+
+    span {
+      font-weight: 600;
+    }
+  }
+
+  .form_wrapper {
+    @include flexProp(column, 0.5rem, flex-start, flex-start);
+
+    .title {
+      font-size: 0.9rem;
+      text-transform: capitalize;
+      font-weight: 400;
+    }
+
+    .box_wrapper {
+      @include flexProp(row, 0.2rem, space-between, center);
+
+      .input_box {
+        height: 2.5rem;
+        width: 2.5rem;
+        border-radius: 5px;
+        border: 1px solid $checkbox-bg;
+        font-size: 1.5rem;
+        padding: 0.5rem;
+        text-align: center;
+        font-weight: 700;
+      }
+    }
+
+    .verify_btn {
+      @include FormButton;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+    }
+  }
+}

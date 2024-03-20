@@ -1,0 +1,32 @@
+{
+  "name": "roc8-1",
+  "version": "1.0.0",
+  "description": "MERN assignment for roc8",
+  "main": "server.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anshul Bhardwaj",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^5.5.2",
+    "@types/body-parser": "^1.19.5",
+    "@types/cors": "^2.8.17",
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/md5": "^2.3.5",
+    "@types/node": "^20.11.30",
+    "@types/nodemailer": "^6.4.14",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.3",
+    "jsonwebtoken": "^9.0.2",
+    "md5": "^2.3.0",
+    "nodemailer": "^6.9.12"
+  },
+  "devDependencies": {
+    "prisma": "^5.5.2"
+  }
+}

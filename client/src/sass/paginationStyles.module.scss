@@ -1,0 +1,34 @@
+@import "./mixins.scss";
+@import "./variables.scss";
+
+.pagination_bar {
+  @include flexProp(row, 0.5rem, center, center);
+  margin-top: 1rem;
+
+  .double_left,
+  .single_left {
+    @include PaginationButton;
+    transform: rotateY(180deg);
+  }
+
+  .pagination_pill {
+    list-style-type: none;
+    @include flexProp(row, 0.5rem, center, center);
+    width: auto;
+
+    li {
+      font-family: "inter", sans-serif;
+      font-weight: 500;
+      font-size: 0.8rem;
+
+      .pagination_btn {
+        @include PaginationButton;
+      }
+    }
+  }
+
+  .single_right,
+  .double_right {
+    @include PaginationButton;
+  }
+}

@@ -1,0 +1,124 @@
+@import "./mixins.scss";
+@import "./variables.scss";
+
+.container {
+  @include flexProp(column, 0rem, flex-start, center);
+
+  .login_options {
+    @include flexProp(row, 1.5rem, flex-end, center);
+    padding: 1rem 4rem;
+    font-family: "inter", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 400;
+
+    .redirect_options {
+      text-transform: capitalize;
+      text-decoration: none;
+      color: $text1;
+    }
+
+    .login_btn {
+      font-family: "inter", sans-serif;
+      font-size: 0.8rem;
+      font-weight: 400;
+      text-transform: capitalize;
+      cursor: pointer;
+      border: none;
+      background-color: transparent;
+    }
+  }
+
+  .navbar_wrapper {
+    @include flexProp(row, 1rem, space-between, flex-end);
+    padding: 1rem 4rem;
+
+    .brand {
+      font-family: "inter", sans-serif;
+      font-weight: 700;
+      font-size: 2rem;
+      text-transform: uppercase;
+      color: $text1;
+      line-height: 25px;
+    }
+
+    .navbar {
+      @include flexProp(row, 0rem, center, center);
+      width: auto;
+
+      .navItems {
+        @include flexProp(row, 2.5rem, center, center);
+        width: auto;
+        list-style-type: none;
+
+        li {
+          .link {
+            text-decoration: none;
+            color: $text1;
+            font-family: "inter", sans-serif;
+            font-weight: 600;
+            text-transform: capitalize;
+            font-size: 1rem;
+            position: relative;
+
+            &::before {
+              content: "";
+              width: 100%;
+              height: 0.1rem;
+              position: absolute;
+              background-color: $text1;
+              bottom: -0.2rem;
+              width: 0;
+              transition: all 0.3s ease;
+            }
+
+            &:hover {
+              &::before {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .btns_wrapper {
+      @include flexProp(row, 3rem, center, center);
+      width: auto;
+
+      .nav_btn {
+        height: 2rem;
+        width: 2rem;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+
+        .nav_icon {
+          height: 90%;
+          width: 90%;
+        }
+      }
+    }
+  }
+
+  .banner {
+    @include flexProp(row, 1rem, center, center);
+    background-color: $bg;
+    padding: 0.5rem;
+    font-family: "inter", sans-serif;
+    font-size: 0.9rem;
+
+    .arrow_btn {
+      display: grid;
+      place-items: center;
+      height: 1.5rem;
+      width: 1.5rem;
+      background-color: transparent;
+      border: none;
+
+      .arrow_icon {
+        width: 85%;
+        height: 85%;
+      }
+    }
+  }
+}

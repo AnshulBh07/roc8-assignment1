@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import "./sass/mixins.scss";
+
+.app {
+  @include flexProp(column, 0rem, flex-start, center);
+  max-width: 100vw;
+  min-height: 100vh;
+  overflow: auto;
+}
